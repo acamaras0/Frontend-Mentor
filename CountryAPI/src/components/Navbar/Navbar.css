@@ -1,0 +1,52 @@
+nav {
+  background: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  padding: 0 10rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-switch [type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.moon {
+  margin-right: 5px;
+  margin-bottom: 1px;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 1rem;
+    font-size: x-small;
+  }
+
+  .moon {
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+  }
+}
