@@ -1,0 +1,14 @@
+img.flag {
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 30px;
+}
