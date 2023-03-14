@@ -42,9 +42,9 @@ span.borders {
 button {
   background-color: #f5f5f5;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
-  padding: 10px 50px 10px 50px;
+  padding: 10px 40px 10px 40px;
   font-size: 1.1rem;
   margin-bottom: 70px;
   cursor: pointer;
@@ -61,10 +61,12 @@ button {
 }
 
 @media (max-width: 1200px) {
-  img.flag {
-    width: 200px;
+  .single-country {
+    padding: 30px;
   }
-
+  img.flag {
+    width: 350px;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -73,13 +75,5 @@ button {
   .text-columns {
     display: flex;
     flex-direction: column;
-  }
-
-  .container-content {
-    padding-left: 0;
-  }
-
-  img.flag {
-    width: 100%;
   }
 }

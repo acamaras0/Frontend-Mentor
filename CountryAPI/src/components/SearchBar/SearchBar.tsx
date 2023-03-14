@@ -34,7 +34,7 @@ const SearchBar = ({ countries }: CountryList) => {
             type="text"
             value={searchTerm}
             onChange={handleChange}
-            placeholder="🔍 Search for a country..."
+            placeholder=" Search for a country..."
           />
         </div>
         <div className="filter">

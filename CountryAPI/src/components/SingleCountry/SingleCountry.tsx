@@ -66,19 +66,19 @@ const SingleCountry = ({ countries }: CountryList) => {
                   Languages: <span>{languages}</span>
                 </p>
               </div>
-              <div>
-                <p className="borders-container">
-                  Border Countries:
-                  {borderCountriesFullName?.map((borderCountry) => {
-                    return (
-                      <span className="borders" key={borderCountry}>
-                        {" "}
-                        {borderCountry}{" "}
-                      </span>
-                    );
-                  })}
-                </p>
-              </div>
+            </div>
+            <div>
+              <p className="borders-container">
+                Border Countries:
+                {borderCountriesFullName?.map((borderCountry) => {
+                  return (
+                    <span className="borders" key={borderCountry}>
+                      {" "}
+                      {borderCountry}{" "}
+                    </span>
+                  );
+                })}
+              </p>
             </div>
           </div>
         </div>
