@@ -20,10 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SearchBar countries={data} />} />
-          <Route
-            path="/:country"
-            element={<SingleCountry countries={data} />}
-          />
+          <Route path="/:country" element={<SingleCountry countries={data}/>} />
         </Routes>
       </BrowserRouter>
     </div>

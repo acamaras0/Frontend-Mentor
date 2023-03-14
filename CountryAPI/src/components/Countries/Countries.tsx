@@ -3,18 +3,10 @@ import { Link } from "react-router-dom";
 import "./Countries.css";
 
 const Countries = ({ countries }: CountryList) => {
-  const viewCountry = (name: string) => {
-    console.log(name);
-  };
-
   return (
     <>
       {countries.map((country) => (
-        <div
-          key={country.name}
-          className="card-container"
-          onClick={() => viewCountry(country.name)}
-        >
+        <div key={country.name} className="card-container">
           <Link to={`/${country.name}`}>
             <img src={country.flag} alt="flag" />
           </Link>
