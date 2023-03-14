@@ -67,8 +67,8 @@ const SingleCountry = ({ countries }: CountryList) => {
                 </p>
               </div>
               <div>
-                <p>
-                  {borderCountriesFullName ? "Border Countries:" : null}
+                <p className="borders-container">
+                  Border Countries:
                   {borderCountriesFullName?.map((borderCountry) => {
                     return (
                       <span className="borders" key={borderCountry}>
