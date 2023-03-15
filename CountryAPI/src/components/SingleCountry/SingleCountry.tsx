@@ -1,5 +1,5 @@
 import { CountryList } from "../../interfaces/interfaces";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import "./SingleCountry.css";
 
@@ -24,13 +24,12 @@ const SingleCountry = ({ countries, theme }: CountryList) => {
 
   return (
     <div className={`single-country ${theme}`}>
-      <button
-        className={theme}
-        onClick={() => window.location.replace("http://localhost:3000/")}
-      >
-        <HiOutlineArrowNarrowLeft className={`arrow ${theme}`} />
-        Back
-      </button>
+      <Link to={"http://localhost:3000/"}>
+        <button className={theme}>
+          <HiOutlineArrowNarrowLeft className={`arrow ${theme}`} />
+          Back
+        </button>
+      </Link>
       <div>
         <div key={countryData?.name} className="container">
           <div>
