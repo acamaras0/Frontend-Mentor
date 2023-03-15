@@ -24,4 +24,5 @@ export interface Country {
 
 export interface CountryList {
   countries: Country[];
+  theme?: string;
 }

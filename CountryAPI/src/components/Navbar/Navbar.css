@@ -1,5 +1,6 @@
-nav {
+nav.light {
   background: #fff;
+  color: hsl(209, 23%, 22%);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -11,8 +12,20 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+nav.dark {
+  background: hsl(209, 23%, 22%);
+  color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  padding: 0 5rem;
+  position: sticky;
+  top: 0;
+}
+
 h1 {
-  color: #333;
   font-weight: 700;
   text-decoration: none;
 }
@@ -27,6 +40,10 @@ h1 {
   height: 0;
   width: 0;
   visibility: hidden;
+}
+
+p.dark {
+  color: #fff;
 }
 
 .moon {

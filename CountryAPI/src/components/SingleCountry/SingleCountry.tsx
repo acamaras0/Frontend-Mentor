@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import "./SingleCountry.css";
 
-const SingleCountry = ({ countries }: CountryList) => {
+const SingleCountry = ({ countries, theme }: CountryList) => {
   const { country } = useParams();
 
   const countryData = countries.find(
@@ -23,9 +23,12 @@ const SingleCountry = ({ countries }: CountryList) => {
   });
 
   return (
-    <div className="single-country">
-      <button onClick={() => window.location.replace("http://localhost:3000/")}>
-        <HiOutlineArrowNarrowLeft className="arrow" />
+    <div className={`single-country ${theme}`}>
+      <button
+        className={theme}
+        onClick={() => window.location.replace("http://localhost:3000/")}
+      >
+        <HiOutlineArrowNarrowLeft className={`arrow ${theme}`} />
         Back
       </button>
       <div>
@@ -38,32 +41,38 @@ const SingleCountry = ({ countries }: CountryList) => {
             <div className="text-columns">
               <div className="first-column">
                 <p>
-                  Native Name: <span>{countryData?.nativeName}</span>
+                  Native Name:{" "}
+                  <span className={theme}>{countryData?.nativeName}</span>
                 </p>
                 <p>
                   Population:{" "}
-                  <span>{countryData?.population.toLocaleString()}</span>
+                  <span className={theme}>
+                    {countryData?.population.toLocaleString()}
+                  </span>
                 </p>
                 <p>
-                  Region: <span>{countryData?.region}</span>
+                  Region: <span className={theme}>{countryData?.region}</span>
                 </p>
                 <p>
-                  Sub Region: <span>{countryData?.subregion}</span>
+                  Sub Region:{" "}
+                  <span className={theme}>{countryData?.subregion}</span>
                 </p>
                 <p>
-                  Capital: <span> {countryData?.capital}</span>
+                  Capital:{" "}
+                  <span className={theme}> {countryData?.capital}</span>
                 </p>
               </div>
               <div className="second-column">
                 <p>
-                  Top Level Domain: <span>{countryData?.topLevelDomain}</span>
+                  Top Level Domain:{" "}
+                  <span className={theme}>{countryData?.topLevelDomain}</span>
                 </p>
                 <p>
                   Currencies:
-                  <span> {currencies} </span>
+                  <span className={theme}> {currencies} </span>
                 </p>
                 <p>
-                  Languages: <span>{languages}</span>
+                  Languages: <span className={theme}>{languages}</span>
                 </p>
               </div>
             </div>
@@ -72,7 +81,7 @@ const SingleCountry = ({ countries }: CountryList) => {
                 Border Countries:
                 {borderCountriesFullName?.map((borderCountry) => {
                   return (
-                    <span className="borders" key={borderCountry}>
+                    <span className={`borders ${theme}`} key={borderCountry}>
                       {" "}
                       {borderCountry}{" "}
                     </span>

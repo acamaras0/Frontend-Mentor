@@ -1,19 +1,34 @@
 import { IoMoonOutline } from "react-icons/io5";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({
+  theme,
+  setTheme,
+}: {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+}) => {
+  const handleTheme = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.preventDefault();
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
-    <nav>
+    <nav className={theme}>
       <div>
         <h1>Where in the world?</h1>
       </div>
-      <div className="theme-switch-wrapper">
+      <div className="theme-switch-wrapper" onClick={(e) => handleTheme(e)}>
         <label className="theme-switch" htmlFor="checkbox">
           <input type="checkbox" id="checkbox" />
           <div className="slider round"></div>
         </label>
         <IoMoonOutline className="moon" />
-        <p>Dark Mode</p>
+        <p className={theme}>Dark Mode</p>
       </div>
     </nav>
   );

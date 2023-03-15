@@ -3,7 +3,7 @@ import Countries from "../Countries/Countries";
 import { CountryList, Country } from "../../interfaces/interfaces";
 import "./SearchBar.css";
 
-const SearchBar = ({ countries }: CountryList) => {
+const SearchBar = ({ countries, theme }: CountryList) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Country[]>([]);
 
@@ -29,7 +29,7 @@ const SearchBar = ({ countries }: CountryList) => {
   return (
     <div className="search-bar">
       <div className="search-filter">
-        <div className="search-bar">
+        <div className={`search-bar ${theme}`}>
           <input
             type="text"
             value={searchTerm}
@@ -38,7 +38,7 @@ const SearchBar = ({ countries }: CountryList) => {
           />
         </div>
         <div className="filter">
-          <select onChange={(event) => handleSelect(event)}>
+          <select className={theme} onChange={(event) => handleSelect(event)}>
             <option value="All">Filter by Region</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>
@@ -50,9 +50,9 @@ const SearchBar = ({ countries }: CountryList) => {
       </div>
       <div className="search-results">
         {searchResults.length > 0 ? (
-          <Countries countries={searchResults} />
+          <Countries countries={searchResults} theme={theme} />
         ) : (
-          <Countries countries={countries} />
+          <Countries countries={countries} theme={theme} />
         )}
       </div>
     </div>
