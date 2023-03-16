@@ -1,4 +1,4 @@
-import { IoMoonOutline } from "react-icons/io5";
+import { IoMoonOutline, IoMoonSharp } from "react-icons/io5";
 import "./Navbar.css";
 
 const Navbar = ({
@@ -27,7 +27,12 @@ const Navbar = ({
           <input type="checkbox" id="checkbox" />
           <div className="slider round"></div>
         </label>
-        <IoMoonOutline className="moon" />
+        {theme === "light" ? (
+          <IoMoonOutline className="moon" />
+        ) : (
+          <IoMoonSharp className="moon" />
+        )}
+
         <p className={theme}>Dark Mode</p>
       </div>
     </nav>
