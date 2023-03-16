@@ -4,6 +4,7 @@
   gap: 6rem;
   padding: 0 5rem;
   color: hsl(209, 23%, 22%);
+  padding-bottom: 280px;
 }
 
 .search-filter {
@@ -87,11 +88,13 @@ select.dark {
 @media (max-width: 1500px) {
   .search-results {
     grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 300px;
   }
 }
 @media (max-width: 1000px) {
   .search-results {
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 300px;
   }
 
   .search-filter {
@@ -125,6 +128,7 @@ select.dark {
   .search-results {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 2rem;
+    padding-bottom: 300px;
   }
 
   .search-filter {
